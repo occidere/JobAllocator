@@ -32,7 +32,7 @@ import java.util.concurrent.ForkJoinPool;
 public class JobAllocationTasklet implements Tasklet, StepExecutionListener {
 	private Logger logger = LoggerFactory.getLogger(JobAllocationTasklet.class);
 
-	private int minuteRange = 30; // TODO JobParameters 로 변경 필요
+	private int minuteRange = 10; // TODO JobParameters 로 변경 필요
 
 	@Value("${job.allocator.execute.thread.count}")
 	private int jobAllocatorExecuteThreadCount;
