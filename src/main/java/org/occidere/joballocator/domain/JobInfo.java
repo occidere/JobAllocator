@@ -25,12 +25,4 @@ public class JobInfo {
 		this.status = JobStatus.getStatus(status);
 	}
 	private String jobCallUrl;
-
-//	@Override
-//	public String toString() {
-//		return String.format(
-//				"Id: %s, Type: %s, Name: %s, Time: %s, status: %s, JobCallUrl: %s",
-//				id, type, name, time, status, jobCallUrl
-//		);
-//	}
 }
