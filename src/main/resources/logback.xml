@@ -19,7 +19,7 @@
 		</encoder>
 		<!-- 요일이 바뀌면서 과거 로그 파일 이름으로 변경. ex) invalid.log -> joballocator.log.190101.2.log -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-			<fileNamePattern>${log.base.dir:${user.home}/logs}/joballocator_error.log.%d{yyMMdd}.%i</fileNamePattern>
+			<fileNamePattern>${log.base.dir:-${user.home}/logs}/joballocator_error.log.%d{yyMMdd}.%i</fileNamePattern>
 			<!-- 10MB를 초과하면 새로운 번호를 붙여서 새로운 로그파일 생성. ex) joballocator.log.190101.2.log -->
 			<maxFileSize>50MB</maxFileSize>
 		</rollingPolicy>
@@ -27,7 +27,7 @@
 
 
 	<!-- 기본으로 적용되는 설정 -->
-	<root level="debug">
+	<root level="info">
 		<appender-ref ref="console"/>
 	</root>
 
